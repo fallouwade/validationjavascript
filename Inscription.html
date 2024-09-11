@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="inscription.js" defer></script>
+</head>
+<body>
+
+    <section class="container-fluid ">
+        <div class="row gap-5">      
+          <!-- Div qui contient l'image a Gauche sur a partie Inscription -->
+        <div class="col-md-4 col-12  bg-success rounded-end-5">
+            <div class="div-img">
+                JHGFD
+            </div>
+        </div>
+
+        <!-- Partie remplissage de formulaire Inscription -->
+        <div class=" col-md-7 col-12 ms-5 ps-5">
+            <div class="text-center col-9">
+                <h3 class="text-success fst-italic mt-3 mb-4" id="p">Inscription</h3>
+            </div>
+            <form id="form">
+                <div class="d-flex container gap-5">
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1"  class="form-label fw-medium">Nom</label>
+                         <input type="text" class="form-control" required id="inscri_nom" >
+                    </div>
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Prénom</label>
+                         <input type="text" class="form-control " required id="inscri_prenom">
+                    </div>
+                </div>
+                 <div class="d-flex container gap-5">
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Date de naissance</label>
+                         <input type="date" class="form-control " required id="inscri_date" >
+                    </div>
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Profession</label>
+                         <input type="text" class="form-control " required id="inscri_profession">
+                    </div>
+                </div>
+                 <div class="d-flex container gap-5">
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Définir mot de passe</label>
+                         <input type="password" class="form-control " required id="inscri_password" >
+                    </div>
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Confirmer votre mot de passe</label>
+                         <input type="password" class="form-control " required id="inscri_confirmepass">
+                         <small id="incorect_passsword"></small>
+                    </div>
+                </div>
+                 <div class="d-flex container gap-5">
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">E-mail</label>
+                         <input type="email" class="form-control " required id="inscri_email" >
+                         <small id="small"></small>
+                    </div>
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Téléphone</label>
+                         <input type="number" class="form-control " required id="inscri_telephone">
+                         <small id="small1"></small>
+                    </div>
+                </div>
+                 <div class="d-flex container gap-5">
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Adresse</label>
+                         <input type="text" class="form-control " required id="inscri_adress" >
+                    </div>
+                    <div class="mb-3 col-4">
+                         <label for="exampleFormControlInput1" class="form-label fw-medium">Organisation</label>
+                         <input type="text" class="form-control " required id="inscri_organe">
+                    </div>
+                </div>
+                 <div class="text-center col-9 mt-3">
+                    <button class="btn btn-success col-6"  id="btn_inscri" type="submit">S'inscrire</button>
+                    <p>Vous avez déja un compte,<a href="connexion.html" class="text-decoration-none text-black fw-medium">Connectez-vous!</a> </p>
+                </div>
+            </form>
+           
+        </div>
+        </div>
+    </section>
+
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+import {collection, addDoc, getDocs,doc,deleteDoc, onSnapshot, updateDoc} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCZypuK23zcCrMuOoMjlOKt5Ay7gQz8ZOc",
+  authDomain: "validdationjs.firebaseapp.com",
+  projectId: "validdationjs",
+  storageBucket: "validdationjs.appspot.com",
+  messagingSenderId: "609699792407",
+  appId: "1:609699792407:web:84a8dbfcb4f6b8b33e7e52"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+// Ajouter les inscriptions au niveaux de firebase
+const formulaire_inscri = collection(db, "formulaire_inscription")
+
+btn_inscri.addEventListener( 'click', function (e){
+    e.preventDefault()
+    console.log("wade")
+    if (inscri_password.value !== inscri_confirmepass.value) {
+        incorect_passsword.innerHTML= "Mot de passe différent";
+        incorect_passsword.classList.add("text-danger")
+    }
+    else{
+        incorect_passsword.innerHTML=""
+    }
+
+    if (verifi_email(inscri_email) && numero(inscri_telephone) && inscri_password.value== inscri_confirmepass.value) {
+          try {
+  const firebase=addDoc(formulaire_inscri,{
+    prenom:inscri_prenom.value, 
+    nom: inscri_nom.value,
+    naissance: inscri_date.value,
+    profession: inscri_profession.value,
+    mot_de_pass:inscri_password.value,
+    confirme_mot_pass:inscri_confirmepass.value,
+    email: inscri_email.value,
+    telephone: inscri_telephone.value,
+    adresse: inscri_adress.value,
+    organisation: inscri_organe.value
+    
+   });
+
+   alert("Inscription valide") ;
+   form.reset()
+   small.innerHTML="";
+   small1.innerHTML=""
+
+}
+
+ catch (e) {
+  console.error("Error adding document: ", e);
+}
+}
+
+})
+
+let form = document.querySelector('#form');
+
+// Vérification de l'adreese email  valide pour l'inscription
+
+console.log(inscri_email)
+ inscri_email.addEventListener('change', function () {
+  verifi_email (this)
+  
+ });
+
+ function verifi_email(inputemail){
+  console.log("wade")
+        let emailreg=new RegExp('[a-z0-9._-]+@gmail.com');
+        let test= emailreg.test(inputemail.value);
+        console.log(test);
+   
+        let small= inputemail.nextElementSibling;
+        if (test) {
+            small.innerHTML="Adresse E-mail valide";
+          small.classList.remove('text-danger')
+            small.classList.add('text-success');
+              return true
+            
+        }
+        else{
+            small.innerHTML="Adresse E-mail invalide";
+          small.classList.remove('text-success');
+            small.classList.add('text-danger');
+              return false
+        }
+        
+ }
+
+
+ // Vérification du numéro telephone  valide pour l'inscription
+
+ form.inscri_telephone.addEventListener('change', function () {
+    numero (this)
+    
+ });
+
+  function numero(inputtelephone){
+    console.log("wade fall")
+       var regex = /^(77|78|70|76|75|33)\d{7}$/;
+      let test1 = regex.test(inputtelephone.value);
+         let small= inputtelephone.nextElementSibling;
+        if (test1) {
+            small.innerHTML="Adresse E-mail valide";
+            small.classList.remove('text-danger')
+            small.classList.add('text-success');
+              return true
+            
+        }
+        else{
+            small.innerHTML="Adresse E-mail invalide";
+            small.classList.remove('text-success');
+            small.classList.add('text-danger');
+              return false
+        }
+ }
+
+
+
+ 
+
+
+
+
+
+</script>
+</html>
