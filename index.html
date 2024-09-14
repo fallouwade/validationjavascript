@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+
+    <link rel="stylesheet" href="connexion.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Page Principal -->
+
+    <div id="page-principal" class="d-flex justify-content-between ">
+        <div id="bg-principal" class="rounded-end-5">
+            <div id="div-img" class=" d-flex justify-content-center " >
+                <img src="image/img-connexion.png" alt="img">
+            </div>
+        </div>
+        <!-- _________________________________________________ -->
+        <div id="page-connexion" class="">
+            <h2 class="text-center fw-semibold my-5 fs-1">
+                Bienvenue sur Bakéli-tontine
+            </h2>
+            <div id="login" class=" d-flex justify-content-center ">
+                <!-- _______________________ -->
+                <div class="w-50 ">
+                    <h3 class="text-center my-3 fw-semibold ">Connectez-vous</h3>
+                    <form class="row g-1 gy-4 needs-validation d-flex justify-content-center  flex-colum  align-items-center  w-100" novalidate>
+                        <div class="col-md-12  align-items-center d-flex flex-column justify-content-center">
+                          <input type="email"  class="form-control border border-0 text-white" id="validationCustom01" value="" placeholder="N° Téléphone" required>
+                          <div class="valid-feedback text-center">
+                            Correct!
+                          </div>
+                        </div>
+                        <div class="col-md-12 align-items-center d-flex flex-column justify-content-center align-items-center">
+                            <input type="number" class="form-control border border-0 text-white" id="validationCustomUsername" placeholder="Mot de passe" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback text-center">
+                             Incorrect!
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-end  pe-5 ">
+                            <span class="me-4 pe-1" >
+                              <a href="" class="" style="text-decoration: none; color: #093545;">Mot de passe oublié?</a>
+                            </span>
+                          </div>
+                        <div class="col-md-12 align-items-center  d-flex justify-content-center align-items-center">
+                          <button class="btn fw-semibold" type="submit">Connexion</button>
+                        </div>
+                        <div class="col-md-12 align-items-center  d-flex justify-content-center align-items-center">
+                          <span class="" >
+                            Vous n'avez pas de compte, 
+                            <a href="" class="fw-semibold " style="text-decoration: none; color: #093545;">inscrivez-vous!</a>
+                        </span>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="connexion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
