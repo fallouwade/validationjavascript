@@ -53,9 +53,7 @@ body {
     width: calc(100% - 200px);
 }
 
-.section {
-   
-}
+
 .white{
     justify-content: space-between !important;
 }
@@ -70,6 +68,42 @@ body {
     background: rgba(86, 184, 115, 0.1);
 
 }
+
+/*partie Utilisateur*/
+
+thead, th{
+    font-size: 13px !important;
+    
+
+}
+
+.bg1{
+     background-color:red !important;
+
+
+}
+
+#pagination li a{
+    padding: 1px 5px 1px 6px !important;
+    font-size: 12px !important;
+
+}
+
+li span{
+    font-size: 14px !important;
+}
+
+.progress {
+    flex: 1; /* La barre de progression prend toute la largeur disponible */
+    height: 7px !important;
+}
+
+.progress-percentage {
+    white-space: nowrap; /* Empêche le texte de se déformer */
+
+
+
+
 
 @media screen and (max-width: 800px) {
 

@@ -216,10 +216,177 @@
                     </div>
                 </div>
             </div>
+           
+            <div>
+                <div class="container mt-4  ps-5 pe-5 ">
+                  <div class="row row-cols-1 row-cols-md-3 ps-5 pe-5">
+                      <div class="col">
+                        <div class="card bg1 text-white shadow">
+                          <div class="card-body">
+                            <p class="card-title">Membre actif <i class="bi bi-circle-fill"></i></p>
+                            <h5>
+                                <label>94</label>
+                                Membres
+                            </h5>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow">
+                          <div class="card-body">
+                           <p class="card-title">Membre Bloqué <i class="bi bi-ban text-danger"></i></p>
+                            <h5>
+                                <label>6</label>
+                                Membres
+                            </h5>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow">
+                          <div class="card-body">
+                            <p class="card-title">Total Effectif</p>
+                            <h5>
+                                <label>100</label>
+                                Membres
+                            </h5>
+                           
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="mt-5 d-flex justify-content-end ">
+                          <button type="button" class="btn btn-primary fw-medium bg-black mb-2" data-bs-toggle="modal" id="modal1" data-bs-target="#exampleModal">
+                               Ajouter
+                           </button>
+                      </div>
+                        
+
+                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">    
+                                <div class=" container ">
+                                
+                                <form id="form" method="post">
+                                <div class="">
+                                        <div class="d-flex container gap-5">
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1"  class="form-label fw-medium">Nom</label>
+                                                 <input type="text" class="form-control" required id="membre_prenom" >
+                                            </div>
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1" class="form-label fw-medium">Prénom</label>
+                                                 <input type="text" class="form-control " required id="membre_nom">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex container gap-5">
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1"  class="form-label fw-medium">Date de naissance</label>
+                                                 <input type="date" class="form-control" required id="membre_naissance" >
+                                            </div>
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1" class="form-label fw-medium">Profession</label>
+                                                 <input type="text" class="form-control " required id="membre_profession">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex container gap-5">
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1"  class="form-label fw-medium">E-mail</label>
+                                                 <input type="email" class="form-control" required id="membre_email" >
+                                            </div>
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1" class="form-label fw-medium">Téléphone</label>
+                                                 <input type="number" class="form-control " required id="membre_telephone">
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex container gap-5">
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1"  class="form-label fw-medium">Adresse</label>
+                                                 <input type="text" class="form-control" required id="membre_adresse" >
+                                            </div>
+                                            <div class="mb-2 col-5">
+                                                 <label for="exampleFormControlInput1" class="form-label fw-medium">Organisation</label>
+                                                 <input type="text" class="form-control " required id="membre_organisation">
+                                            </div>
+                                        </div>
+
+                                         <div class="d-flex container justify-content-center">
+                                            
+                                            <div class=" col-8">
+                                                 <label for="exampleFormControlInput1" class="form-label fw-medium">Seuil</label>
+                                                 <input type="number" class="form-control " required id="membre_seuil">
+                                            </div>
+                                        </div>
+
+                                      
+                                    </div>
+                                </form>
+                                </div>
+                              
+                              </div>
+                              <div class="modal-footer d-flex justify-content-center" id="footer">
+                                
+                                <button type="button" class="btn btn-primary col-5" data-bs-dismiss="modal" id="btn_ajou_membre">Ajouter</button>      
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                        
+                            <!-- Tableaux partie utilisateur -->
+                    <div class="container col-11  ">
+                    <table class="table ms-1 shadow-sm col-12 " id="table">
+                         <thead class="rounded-1 " >
+                            <tr class="table-success">
+                              
+                              <th scope="col" >Membres</th>
+                              <th scope="col">Date début</th>
+                              <th scope="col">Seuil</th>
+                              <th scope="col">Progression</th>
+                              <th scope="col">Statut</th>
+                              <th scope="col">Actions</th>
+                            </tr>
+                          </thead>
+                            <tbody id="body" class="rounded-5">
+                                    
+                                    <!-- DONNEE RECUP2RER SUR FIREBASE -->
+                                                  
+                            </tbody>
+                    </table>
+                    </div>
+                     <nav aria-label="..." class="pt-4" >
+                      <ul class="pagination d-flex justify-content-center ">
+                        <li class="page-item disabled ">
+                          <span class="page-link border-0 bg-white txt-black">Previous page</span>
+                        </li>
+                        <div class="d-flex gap-1 mt-2" id="pagination">
+                            <li class="page-item"><a class="page-link rounded-pill shadow-sm text-black" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link rounded-pill shadow-sm text-black" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link rounded-pill shadow-sm text-black" href="#">3</a></li>
+                        </div>
+                        <li class="page-item border-0">
+                          <span class="page-link text-black border-0 bg-white ">Next page</span>
+                        </li>
+                      </ul>
+                    </nav>
+            </div>
+
+        
         </div>
 
 
         <!-- Cotisations -->
+
+
         <div id="cotisations" class="section" style="display:none;">
             <div class="bg-white white p-3 shadow-lg  d-flex  align-items-center">
                 <div class="none">
@@ -252,6 +419,107 @@
                     </div>
                 </div>
             </div>
+            <div class="container mt-4">
+
+                <div class="row row-cols-1 row-cols-md-3 ps-5 pe-5">
+                      <div class="col">
+                        <div class="card bg1 text-white shadow">
+                          <div class="card-body">
+                            <p class="card-title">Membre actif <i class="bi bi-circle-fill"></i></p>
+                            <h5>
+                                <label>94</label>
+                                Membres
+                            </h5>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow">
+                          <div class="card-body">
+                           <p class="card-title">Membre Bloqué <i class="bi bi-ban text-danger"></i></p>
+                            <h5>
+                                <label>6</label>
+                                Membres
+                            </h5>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow">
+                          <div class="card-body">
+                            <p class="card-title">Total Effectif</p>
+                            <h5>
+                                <label>100</label>
+                                Membres
+                            </h5>
+                           
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                  
+            </div>
+            <div>
+                 <div class="container col-11 mt-3 ">
+                    <table class="table ms-1 shadow-sm col-12 " id="table">
+                         <thead class="rounded-1 " >
+                            <tr class="table-success">
+                              
+                              <th scope="col" >Membres</th>
+                              <th scope="col">Date début</th>
+                              <th scope="col">Montant cotisé</th>
+                              <th scope="col">Montant restant</th>
+                              <th scope="col">Actions</th>
+                            </tr>
+                          </thead>
+                            <tbody id="body1" class="rounded-5">
+                               
+                                    
+                            </tbody>
+                    </table>
+                    </div>
+                     <nav aria-label="..." class="pt-3" >
+                      <ul class="pagination d-flex justify-content-center ">
+                        <li class="page-item disabled ">
+                          <span class="page-link border-0 bg-white txt-black">Previous page</span>
+                        </li>
+                        <div class="d-flex gap-1 mt-2" id="pagination">
+                            <li class="page-item"><a class="page-link rounded-pill shadow-sm text-black" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link rounded-pill shadow-sm text-black" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link rounded-pill shadow-sm text-black" href="#">3</a></li>
+                        </div>
+                        <li class="page-item border-0">
+                          <span class="page-link text-black border-0 bg-white ">Next page</span>
+                        </li>
+                      </ul>
+                    </nav>
+                
+            </div>
+        </div>
+
+
+        <!-- MODAL POUR CTISER -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3 col-4">
+                    <label for="exampleFormControlInput" class="form-label fw-medium">Montant à cotiser</label>
+                    <input type="number" class="form-control " required id="cotiser">
+                 </div>
+              </div>
+              <div class="modal-footer">
+               
+                <button type="button" class="btn btn-primary" id="valider_cotisation" data-bs-dismiss="modal">Valider</button>
+              </div>
+            </div>
+          </div>
         </div>
 
 
@@ -322,5 +590,326 @@
     <script src="diagramme1.js"></script>
     <script src="diagramme2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script type="module">
+     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+import {collection, addDoc, getDocs,doc,deleteDoc, onSnapshot, updateDoc,arrayUnion} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCZypuK23zcCrMuOoMjlOKt5Ay7gQz8ZOc",
+  authDomain: "validdationjs.firebaseapp.com",
+  projectId: "validdationjs",
+  storageBucket: "validdationjs.appspot.com",
+  messagingSenderId: "609699792407",
+  appId: "1:609699792407:web:84a8dbfcb4f6b8b33e7e52"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+                                                    
+
+                                                    // PARTIE UTILISATEUR
+
+
+
+    // Affichage des membre
+let todo=[];
+let todo1=[];
+let currentPage = 1;
+let itemsPerPage = 6;
+
+function affichage_utilisateur() {
+    let element = "";
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const paginatedItems = todo.slice(start, end);
+    console.log(paginatedItems)
+
+
+
+    paginatedItems.forEach(item => {
+        
+        console.log( item.id)
+        element += `
+            
+
+            <tr > 
+                <td>
+                   ${item.prenom_nom} 
+                                    
+                 </td>
+                 <td>
+                  ${item.date_debut.date} 
+                   </td><td>${item.seuil}</td>
+                     <td style="display: table-cell;">
+                        <div class="d-flex align-items-center gap-1 mt-1">
+                            <small class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <small class="progress-bar bg-success" style="width: 25%"></small>
+
+                             </small> 
+                              <small class="progress-percentage">100%</small>
+                        </div>
+                      </td>
+                      <td>terminé</td>
+                <td>
+                     <div class="d-flex  align-items-center">
+                        <button  type="button" class="border-0 m-0 p-1 bg-white"  >
+                            <i class="bi bi-eye"></i>
+                        </button>
+                         <button type="button" class="border-0 m-0 p-1 bg-white"   >
+                            <i class="bi bi-archive"></i>
+                        </button>
+                         <button type="button" class="border-0 m-0 p-1 bg-white"  >
+                             <i class="bi bi-ban "></i>
+                        </button>
+                     </div>
+                </td>
+             </tr>
+
+
+        `;
+    });
+  
+
+    body.innerHTML = element;
+    
+}
+
+
+// Recuperation des données au niveau de firebase
+
+//Recupération pour la partie Ajouter membre
+const formulaire_membre = collection(db, "formulaire_ajouter");
+
+//Recupération pour la partie Cotisation
+const formulaire_cotisation = collection(db,"formulaire_cotiser")
+
+async function recuperation_firebase() {
+
+            try {
+
+                //Recupération pour la partie Ajouter membre
+                const snapshot = await getDocs(formulaire_membre);
+                snapshot.docs.forEach(doc => {
+                    todo.push({ ...doc.data(), id: doc.id });
+                });
+
+
+                //Recupération pour la partie Cotisation
+                const snapshot1 = await getDocs(formulaire_cotisation);
+                snapshot1.docs.forEach(doc => {
+                    todo1.push({ ...doc.data(), id: doc.id });
+                });
+
+
+                //Recupération pour la partie Ajouter membre
+
+                onSnapshot(formulaire_membre, (snap) => {
+                    todo = [];
+                    snap.docs.forEach((doc) => {
+                        todo.push({ ...doc.data(), id: doc.id });
+                    });
+                    affichage_utilisateur();
+                });
+
+
+                //Recupération pour la partie Cotisation
+                onSnapshot(formulaire_cotisation, (snap) => {
+                    todo1 = [];
+                    snap.docs.forEach((doc) => {
+                        todo1.push({ ...doc.data(), id: doc.id });
+                    });
+                    affichage_cotisation() 
+                });
+
+
+            }
+             catch (e) {
+                console.error("Erreur: ", e);
+            }
+        }
+
+        recuperation_firebase()
+
+
+// Boutton Ajouter des membre au niveaux de firebase
+      
+
+btn_ajou_membre.onclick= async function (e){
+    e.preventDefault()
+
+
+let prenom_noms= membre_prenom.value + " " + membre_nom.value;
+console.log(prenom_noms)
+        const dateActuelle = new Date();
+        const jour = dateActuelle.getDate();
+        const moisIndex = dateActuelle.getMonth() + 1; // Les mois commencent à 0, donc on ajoute 1
+        const annee = dateActuelle.getFullYear();
+        const moisNoms = [
+         "janvier", "février", "mars", "avril", "mai", "juin",
+         "juillet", "août", "septembre", "octobre", "novembre", "décembre"
+        ];
+        const moi = moisNoms[moisIndex];
+        let d= jour+"/"+moisIndex+"/"+annee;
+        console.log(d)
+
+                  try {
+    // Ajouter des Membre
+  addDoc(formulaire_membre,{
+        prenom_nom:prenom_noms ,
+        naissance: membre_naissance.value,
+        profession: membre_profession.value,
+        email: membre_email.value,
+        telephone: membre_telephone.value,
+        date_debut: {date: d, mois:moi}, 
+        seuil: membre_seuil.value,
+        progression: "attente ",
+        statut: " termine",
+        adresse: membre_adresse.value,
+        organisation: membre_organisation.value     
+   });
+
+  //Ajouter Cotisaton
+ await addDoc(formulaire_cotisation,{
+    prenom_nom:prenom_noms ,
+    date_debut: {date: d, mois:moi},
+    date_mois: [{date: d, mois:moi, id:0}],
+    montant_mois: [{valeur:0, id:d}],
+    montant_cotise: 0,
+    montant_restant: membre_seuil.value,
+    montant_depart_total: membre_seuil.value
+  })
+
+  affichage_utilisateur()
+
+ 
+} catch (e) {
+  console.error("Error adding document: ", e);
+}
+}
+
+
+                                        // Partie Cotisation
+                
+
+
+function affichage_cotisation(total2){
+     let element = "";
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const paginatedItems = todo1.slice(start, end);
+    
+
+     paginatedItems.forEach((item)=> {
+             
+      
+        let isDisabled = parseFloat(total2) + parseFloat(cotiser.value) >= parseFloat(item.montant_depart_total);
+
+
+         element += `
+             <tr > 
+                <td>
+                   ${item.prenom_nom} 
+                                    
+                 </td>
+                 <td>
+                  ${item.date_debut.date} 
+                  </td>
+                   <td>${item.montant_cotise}</td>
+                    <td >${item.montant_restant}</td>
+                    <td>
+                     <div class="">
+                        <button  type="button" class="border-0  bg-white"  >
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal1" id="btn_cotiser-${item.id}" onclick="btn_cotisation('${item.id}')" ${isDisabled ? 'disabled' : ''}>
+                    Cotiser
+                    </button>
+                     </div>
+                    </td>
+             </tr>
+        `;
+       
+    });
+      body1.innerHTML = element;
+}
+
+// Ajout de cotisation
+async function ajouterCotisation(id, montant, total, montan_rest, total1) {
+  try {
+
+    const docRef = doc(db, "formulaire_cotiser", id);
+    const dateActuelle = new Date();
+        const jour = dateActuelle.getDate();
+        const moisIndex = dateActuelle.getMonth() + 1; // Les mois commencent à 0, donc on ajoute 1
+        const annee = dateActuelle.getFullYear();
+        const moisNoms = [
+         "janvier", "février", "mars", "avril", "mai", "juin",
+         "juillet", "août", "septembre", "octobre", "novembre", "décembre"
+        ];
+        const moi = moisNoms[moisIndex];
+        let d= jour+"/"+moisIndex+"/"+annee;
+   
+    // Met à jour le document avec le montant de la cotisation
+        
+
+    await updateDoc(docRef, {
+      montant_mois:arrayUnion( {valeur: parseFloat(montant), id:d}),
+        // date_mois: arrayUnion({date: d, mois:moi, id:}),
+      montant_cotise: parseFloat(total) + parseFloat(montant),  
+      montant_restant: parseFloat(montan_rest) - parseFloat(montant)  
+    });
+
+    console.log('Cotisation ajoutée avec succès');
+  } catch (error) {
+    console.error('Erreur lors de l\'ajout de la cotisation:', error);
+  }
+}
+
+
+// Cotisation a envoyer
+document.getElementById('valider_cotisation').onclick = async function(e) {
+  e.preventDefault();
+  if (indice) {
+    const champ = document.getElementById('cotiser').value;
+     let tab= todo1.filter(item => item.id == indice);
+
+      let total_a_cotisser= tab[0].montant_depart_total;
+    
+      let tab1 = tab.map(item=> item.montant_mois.map(items => {
+        return items.valeur;
+      }));
+   
+       const tab_total_cotiser = tab1.reduce((a, b) => {
+         return a + b, 0; 
+        });
+
+       let total_cotiser= tab_total_cotiser.reduce((a,b)=>a+b)
+      
+         let montant_r=  tab[0].montant_restant;
+       
+
+
+    await ajouterCotisation(indice, champ, total_cotiser, montant_r, total_a_cotisser);
+    affichage_cotisation();  // Actualise l'affichage après la mise à jour
+  }
+};
+   
+let indice;
+
+window.btn_cotisation =  function(id) {
+  indice = id;
+  document.getElementById('cotiser').value=""
+};
+
+
+
+
+</script>
 </body>
 </html>
