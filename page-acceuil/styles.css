@@ -100,10 +100,12 @@ li span{
 
 .progress-percentage {
     white-space: nowrap; /* Empêche le texte de se déformer */
+ }
 
-
-
-
+ 
+  .table-success  {
+    background-color: #20DF7F !important;
+  }
 
 @media screen and (max-width: 800px) {
 
