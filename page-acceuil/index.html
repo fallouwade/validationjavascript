@@ -27,7 +27,7 @@
                 <ul>
     
                     <h4 class=" text-white fw-bold my-3 d-flex align-items-center" >
-                        <img src="/image/Group 33777.png" class="px-1" alt="">
+                        <img src="/image/Savings.png" class="px-1" alt="">
                         Bakéli Tontine
                     </h4> 
         
@@ -586,11 +586,13 @@
             </div>
         </div>
     </div>
+</body>
+
     <script src="script.js"></script>
     <script src="diagramme1.js"></script>
     <script src="diagramme2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
 
 <script type="module">
      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
@@ -782,7 +784,8 @@ console.log(prenom_noms)
     montant_mois: [{valeur:0, id:d}],
     montant_cotise: 0,
     montant_restant: membre_seuil.value,
-    montant_depart_total: membre_seuil.value
+    montant_depart_total: membre_seuil.value,
+      isDisabled:false
   })
 
   affichage_utilisateur()
@@ -827,7 +830,7 @@ function affichage_cotisation(total2){
                         <button  type="button" class="border-0  bg-white"  >
                             <i class="bi bi-eye"></i>
                         </button>
-                        <button type="button" class="btn btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal1" id="btn_cotiser-${item.id}" onclick="btn_cotisation('${item.id}')" ${isDisabled ? 'disabled' : ''}>
+                        <button type="button" class="btn btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal1" id="btn_cotiser-${item.id}" onclick="btn_cotisation('${item.id}')" ${item.isDisabled ? 'disabled' : ''}>
                     Cotiser
                     </button>
                      </div>
@@ -840,7 +843,7 @@ function affichage_cotisation(total2){
 }
 
 // Ajout de cotisation
-async function ajouterCotisation(id, montant, total, montan_rest, total1) {
+async function ajouterCotisation(id, montant, total, montan_rest, total1, disable) {
   try {
 
     const docRef = doc(db, "formulaire_cotiser", id);
@@ -862,7 +865,8 @@ async function ajouterCotisation(id, montant, total, montan_rest, total1) {
       montant_mois:arrayUnion( {valeur: parseFloat(montant), id:d}),
         // date_mois: arrayUnion({date: d, mois:moi, id:}),
       montant_cotise: parseFloat(total) + parseFloat(montant),  
-      montant_restant: parseFloat(montan_rest) - parseFloat(montant)  
+      montant_restant: parseFloat(montan_rest) - parseFloat(montant) ,
+         isDisabled: disable 
     });
 
     console.log('Cotisation ajoutée avec succès');
@@ -894,9 +898,23 @@ document.getElementById('valider_cotisation').onclick = async function(e) {
          let montant_r=  tab[0].montant_restant;
        
 
+     let isDisabled = parseFloat(total_cotiser) + parseFloat(cotiser.value) >= parseFloat(total_a_cotisser);
 
-    await ajouterCotisation(indice, champ, total_cotiser, montant_r, total_a_cotisser);
+    await ajouterCotisation(indice, champ, total_cotiser, montant_r, total_a_cotisser, isDisabled);
     affichage_cotisation();  // Actualise l'affichage après la mise à jour
+    
+    
+    console.log(disable)
+    let btn_cotiser= document.getElementById(indice);
+    if (disable) {
+            
+            btn_cotiser.disabled=true;
+             console.log(btn_cotiser)
+           
+        }
+
+
+
   }
 };
    
@@ -911,5 +929,4 @@ window.btn_cotisation =  function(id) {
 
 
 </script>
-</body>
 </html>
