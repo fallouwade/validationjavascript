@@ -559,29 +559,280 @@
                     </div>
                 </div>
             </div>
-            <div id="pageAcceuiParametre"  class="section2" >
+            <div id="pageAcceuiParametre"  class="section2 p-5 bg-light" >
                 <h1>Parametre Generaux 1</h1>
-                
+                <div class="container mt-3 bg-white p-3">
+                  <div class="row">
+                    <div class="col-12 col-md-5">
+                      <div class="row">
+                        <div class="col">
+                          <div class=" text-center">
+                            <p class="text-lit fw-bold ">profil</p>
+                            <img src="/image/Ellipse 9.png" alt="" class="rounded-circle img-profile w-75">
+                        </div>
+                        <div class="row  text-center">
+                            <h3 class="text-center mx-3 vert">Ndiagua Sall</h2>
+                            <h5 class="mx-2 vert">Admin</h5> 
+                        </div>
+                        </div>
+                        <div class="col">
+                          <div class="trait mx-5"><div class="trai1"></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                      <form class="row g-3 me-5">
+                        <div class="col-md-6">
+                          <label for="prenom" class="form-label">Prénom</label>
+                          <input type="text" class="form-control" id="inputPrenom" required>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="Nom" class="form-label">Nom</label>
+                          <input type="text" class="form-control" id="inputNom" required>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="phone" class="form-label">Téléphone</label>
+                          <input type="text" class="form-control" id="inputPhone" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="E-mail" class="form-label">E-mail</label>
+                            <input type="text" class="form-control" id="inputEmail" required>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="Statut" class="form-label">Statut</label>
+                          <input type="text" class="form-control" id="inputStatut" placeholder="Administrateur" required>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn text-white MJ p-1" type="submit" id="btn-jour">Mettre à jour</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
             </div>
             <div id="content2">
                 <!-- Parametres Generaux -->
-                 <div id="parametresgeneraux" class="section2">
+                 <div id="parametresgeneraux" class="section2 p-5 bg-light">
                     <h1>Parametre Generaux</h1>
+                    <div class="container p-3 bg-white">
+                      <div class="row">
+                        <div class=" col-12 col-md-4 ">
+                          <div class="row">
+                            <div class="col">
+                              <div class=" text-center">
+                                <p class="text-lit fw-bold  ">profil</p>
+                                <img src="/image/Ellipse 9.png" alt="" class="rounded-circle img-profile w-50">
+                            </div>
+                            <div class="row  text-center">
+                                <h2 class="text-center mx-3 vert" id="info5">Ndiagua Sall</h2>
+                                <h5 class="mx-2 vert" id="info6">Admin</h5>
+                                <br>
+                                <br>
+                                <!-- ------modal-edifier------- -->
+
+                                <button type="button " class=" mx-5 MJ  btn p-0 w-75">
+                                    <a href="#" class="text-white">Editer profil</a>
+                                  </button>
+                                  
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-center" id="admin">
+                            <div class="trait mx-3"><div class="trai1"></div></div>
+                        </div>
+                            </div>
+                            <div class="col"></div>
+                          </div>
+                       
+                        <div class="col-12 col-md-8">
+                                <!-- -------------info--------------- -->
+                                 <div class="row">
+                                    <h6 class=" fw-bold vert-claire">Informations Générals</h6>
+                                 </div>
+                                <div
+                                    class="row  border-bottom pt-3">
+                                    <div class="col-md-8">Prénom
+                                    </div>
+                                    <div class="col-md-4 text-center"><p id="info1">Ndiagua</p></div>
+                                </div>
+                                <div
+                                    class="row border-bottom pt-3">
+                                    <div class="col-md-8">Nom
+                                    </div>
+                                    <div class="col-md-4 text-center"><p id="info2">Sall</p></div>
+                                </div>
+                                <div
+                                    class="row border-bottom pt-3">
+                                    <div class="col-md-8">Statut
+                                    </div>
+                                    <div class="col-md-4 text-center"><p id="info3">Administrateur</p></div>
+                                </div>
+                                <div
+                                class="row  pt-3">
+                                <div class="col-md-8">E-mail
+                                </div>
+                                <div class="col-md-4 text-center"><p id="info4">ndiagua@gmail.com</p></div>
+                            </div>
+
+
+                                <!-- --------statistique------- -->
+                                 <div class="row">
+                                    <h6 class=" fw-bold  vert-claire mt-2 border-bottom ">Statistiques</h6>
+
+                                 </div>
+                                <div
+                                    class="row  border-bottom pt-3">
+                                    <div class="col-md-8"><p>Nombre de membre ajoutés</p>
+                                    </div>
+                                    <div class="col-md-4 text-center">25</div>
+                                </div>
+                                <div
+                                    class="row border-bottom pt-3">
+                                    <div class="col-md-8">Nombre de membre archivés
+                                    </div>
+                                    <div class="col-md-4 text-center">10</div>
+                                </div>
+                                <div
+                                    class="row  pt-3">
+                                    <div class="col-md-8">Nombre de membre bloqués
+                                    </div>
+                                    <div class="col-md-4 text-center">4</div>
+                                </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
                  </div>
 
                  <!-- Parties Utilisateur 2 -->
-                 <div id="utilisateur2" class="section2">
+                 <div id="utilisateur2" class="section2 p-5 bg-light">
                     <h1>Utilisateurs</h1>
+                    <div class="container bg-white">
+                      <div class="row">
+                        <div class="col">
+                          <h4>Membre</h4>
+                          <div class="row">
+                              <div class="col-12 col-md-5">
+                                  <table class="table  no-border ">
+                                      <tbody>
+                                          <tr>
+                                              <td>Selena Roy</td>
+                                          </tr>
+                                          <br>
+                                          <br>
+                                          <tr>                           
+                                           <td>Emma Watson</td>
+                                          </tr>
+                                          <tr>                       
+                                          <td>Jhon Robert</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Anne Hathaway</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Ravi Shankar</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Emma Stone</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Floyd Miles</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Janne cooper</td>
+                                      </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <div class="col-md-2 text-center" id="admin">
+                                  <div class="trait mx-5"><div class="trai1"></div></div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <h3>Information General</h3>
+                          <form action="" class="p-2">
+                              <div class="row g-3">
+                                  <div class="col-md-6">
+                                      <label for="Nom"  class="form-label">Nom</label><br>
+                                      <input type="text" class="form-control" placeholder="Roy" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="Nom"  class="form-label">Prenom</label><br>
+                                      <input type="text" class="form-control"placeholder="Selena" required>
+                                  </div>
+                              </div>
+                              <div class="row g-3">
+                                  <div class="col-md-6">
+                                      <label for="Naissance"  class="form-label">Date de naissance</label><br>
+                                      <input type="date" class="form-control" placeholder="jj/mm/aa" required >
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="Profession"  class="form-label">Profession</label><br>
+                                      <input type="text" class="form-control" placeholder="Designer">
+                                  </div>
+                              </div>
+                              <div class="row g-3">
+                                  <div class="col-md-6">
+                                      <label for="passe"  class="form-label">Definir Mot de pass</label><br>
+                                      <input type="password" class="form-control"placeholder="*******" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="confirme"  class="form-label">Confirmer mot de passe</label><br>
+                                      <input type="password" class="form-control"placeholder="*******"  required>
+                                  </div>
+                              </div>
+                              <div class="row g-3">
+                                  <div class="col-md-6">
+                                      <label for="E-mail"  class="form-label">E-mail</label><br>
+                                      <input type="email" class="form-control" placeholder="selenaroy98@gmail.com" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="phone"  class="form-label">Téléphone</label><br>
+                                      <input type="text" class="form-control" placeholder="+221 77 250 11 22" required >
+                                  </div>
+                              </div>
+                              <div class="row g-3">
+                                  <div class="col-md-6">
+                                      <label for="Adress"  class="form-label">Adresss</label><br>
+                                      <input type="text" class="form-control" placeholder="HLM grand yoff,Dakar" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="organisation"  class="form-label">organisation</label><br>
+                                      <input type="text" class="form-control"placeholder="volkeno" required >
+                                  </div>
+                              </div><br>
+                              <button class="btn p-1 text-white mj ">Mettre a jour</button>
+                          </form>
+                        </div>
+                      </div>
+                      <!-- -------pagination---------- -->
+                       <!-- <div class="box p-2">
+                        <button type="button" class="btn text-black bg-success"><a href="#">Preview</a></button>
+                        <button type="button" class="btn text-black bg-success"><a href="#">Next</a></button>
+                       </div> -->
+                    </div>
                  </div>
 
                  <!-- Parties Archives -->
                  <div id="archives" class="section2">
                     <h1>Archives</h1>
+                    <div class="container">
+                      <div class="row">
+                        <p class="archives"></p>
+                        <table></table>
+                      </div>
+                    </div>
                  </div>
 
                  <!-- Parties Membres Bloques -->
                  <div id="MembresBloquer" class="section2">
                     <h1>Membres Bloques</h1>
+                    <div class="container">
+                      <div class="row">
+                        <p class="bloqués"></p>
+                        <table></table>
+                      </div>
+                    </div>
                  </div>
             </div>
         </div>
@@ -589,7 +840,7 @@
     <script src="script.js"></script>
     <script src="diagramme1.js"></script>
     <script src="diagramme2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="misajour.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script type="module">
@@ -688,6 +939,7 @@ const formulaire_membre = collection(db, "formulaire_ajouter");
 
 //Recupération pour la partie Cotisation
 const formulaire_cotisation = collection(db,"formulaire_cotiser")
+
 
 async function recuperation_firebase() {
 
@@ -906,6 +1158,67 @@ window.btn_cotisation =  function(id) {
   indice = id;
   document.getElementById('cotiser').value=""
 };
+
+//ajout des information de l'admin
+
+// appel des variables de parametre generaux1
+let prenom1 = document.getElementById("inputPrenom");
+let nom1 = document.getElementById("inputNom");
+let statut1 = document.getElementById("inputStatut");
+let mail1 = document.getElementById("inputEmail");
+
+// appel des variables de parametre genereaux
+let prenom2 = document.getElementById("info1");
+let nom2 = document.getElementById("info2");
+let statut2 = document.getElementById("info3");
+let mail2 = document.getElementById("info4");
+let info = document.getElementById("info5")
+let infos = document.getElementById("info6")
+
+let bouton = document.getElementById("btn-jour");
+
+bouton.addEventListener("click",(e)=>{
+    e.preventDefault();
+    prenom2.innerHTML = prenom1.value;
+    nom2.innerHTML = nom1.value
+    statut2.innerHTML = statut1.value;
+    mail2.innerHTML = mail1.value
+    info.innerHTML=prenom1.value + " " + nom1.value;
+    infos.innerHTML=statut1.value;
+    console.log(prenom2,nom2);
+        // Add a new document with a generated id.
+        const docRef =  addDoc(collection(db, "admin"), {
+  name: prenom1.value,
+  lastname:nom1.value,
+  status:statut1.value,
+  email:mail1.value
+})
+console.log("Document written with ID: ", docRef.id);
+    
+
+// recuperation des infons admin
+recupererDonnees();
+});
+async function recupererDonnees() {
+    const querySnapshot = await getDocs(collection(db, "admin"));
+    querySnapshot.forEach((doc) => {
+        const data = doc.data();
+
+
+        prenom2.innerHTML =data.name;
+        nom2.innerHTML =data.lastname;
+        statut2.innerHTML=data.status;
+        mail2.innerHTML = data.email;
+        info.innerHTML=data.name + " " +data.lastname;
+        infos.innerHTML=data.status;
+
+
+    });
+}
+
+// Appel de la fonction pour récupérer les données
+recupererDonnees();
+
 
 
 
