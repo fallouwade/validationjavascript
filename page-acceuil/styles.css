@@ -8,9 +8,7 @@ body {
     background-color: #093545 !important;
     
 }
-.couleur-bg{
 
-}
 #offcanvasResponsive{
     background-color: #093545 !important;
 }
@@ -64,7 +62,6 @@ body {
 }
 .img-sac{
     padding: 9px ;
-     ;
     background: rgba(86, 184, 115, 0.1);
 
 }
@@ -102,17 +99,23 @@ li span{
     white-space: nowrap; /* Empêche le texte de se déformer */
  }
 
-
-
-}
-
-
- 
   .table-success  {
     background-color: #20DF7F !important;
   }
 
+
+
+/*PARTIE COTISATION*/
+
+#voir #voir_nom{
+    line-height: 1px !important;
+   
 }
+#voir_total{
+    color:#20DF7F ;
+}
+
+
 
 
 @media screen and (max-width: 800px) {

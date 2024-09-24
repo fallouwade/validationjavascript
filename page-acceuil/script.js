@@ -36,7 +36,6 @@ function sectionParametre(idd) {
 // Afficher la section par défaut (Accueil) lors du chargement de la page
 window.onload = function() {
     sectionParametre('parametresgeneraux');
-};
-
+}
 
 
