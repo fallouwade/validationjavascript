@@ -1187,7 +1187,7 @@ window.btn_archive= async function(id){
 
 let tab= todo.filter(item=> item.id == id)
 console.log(tab[0].date_debut)
-let tab1=[]
+
 try{
 await addDoc(formulaire_archive,{
         prenom_nom:tab[0].prenom_nom ,
@@ -1209,11 +1209,11 @@ catch (e) {
   console.error("Error adding document: ", e);
 }
 
-        if (tab1.length>0) {
+     
 await deleteDoc(doc(db, "formulaire_ajouter", id));
  todo = todo.filter(toto1 => toto1.id !== id);
             affichage_utilisateur()  ; // Met à jour l'affichage
-}
+
 }
 
 function affichage_archive(){
@@ -1358,12 +1358,10 @@ window.btn_desarchive= async function(id){
  catch (e) {
   console.error("Error adding document: ", e);
 }
-    if (tab.length>0) {
+    
 await deleteDoc(doc(db, "formulaire_archiv", id));
  todo = todo2.filter(toto1 => toto1.id !== id);
            affichage_archive()  ; // Met à jour l'affichage
-}
-
 
 }
 
@@ -1417,10 +1415,10 @@ function affichage_cotisation(total2){
 // Ajout de cotisation
 async function ajouterCotisation(id, montant, total, montan_rest, total1, disable, utili_id, pourcent, todo2_filter) {
   try {
-
+    let docutili;
     const docRef = doc(db, "formulaire_cotiser", id);
     if (utili_id !== undefined) {
-    const docutili=doc(db, "formulaire_ajouter", utili_id)
+     docutili=doc(db, "formulaire_ajouter", utili_id)
 }
     let doc_archive= todo2_filter;
     console.log(doc_archive)
